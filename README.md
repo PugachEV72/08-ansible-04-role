@@ -9,7 +9,7 @@
 
 ![Скриншот 1](https://github.com/PugachEV72/Images/blob/master/2023-11-25_12-12-52.png)
 
-[TERRAFORM](https://github.com/PugachEV72/08-ansible-04-roles/tree/main/terraform_vms) 
+[TERRAFORM](https://github.com/PugachEV72/08-ansible-04-role/tree/main/terraform_vms) 
 
 ---
 
