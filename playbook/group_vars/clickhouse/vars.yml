@@ -1,0 +1,18 @@
+---
+clickhouse_database_name: vector_logs
+clickhouse_create_table_name: dummy_logs
+clickhouse_version: "22.3.3.44"
+clickhouse_packages:
+  - clickhouse-client
+  - clickhouse-server
+  - clickhouse-common-static
+clickhouse_listen_host:
+  - "::"
+clickhouse_users_custom:
+  - name: "{{ api_user }}"
+    password: "{{ api_password }}"
+    comment: ""
+    networks:
+      - 0.0.0.0/0
+    profile: default
+    quota: default

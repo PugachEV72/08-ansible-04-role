@@ -1,0 +1,30 @@
+---
+- name: Ping
+  tags: [ping]
+  hosts:
+    - clickhouse
+    - vector
+    - lighthouse
+  tasks:
+    - name: Check availability servers
+      ping:
+
+- hosts: clickhouse
+  tags: [clickhouse]
+  roles:
+    - clickhouse
+  post_tasks:
+    - name: Create database and table
+      tags: clickhouse_db
+      import_tasks: tasks/create_clickhouse_db_task.yml  
+
+- hosts: vector
+  tags: [vector]
+  roles:
+    - vector-role
+
+- hosts: lighthouse
+  tags: [lighthouse]
+  roles:
+    - lighthouse-role
+
